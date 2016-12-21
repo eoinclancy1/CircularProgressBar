@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.eoinclancy.circularprogressbar.MainActivity"
+    android:orientation="horizontal">
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="top|center_horizontal"
+        android:gravity="top|center_horizontal"
+        android:id="@+id/TopView">
+
+        <TextView
+            android:text="@string/curr_best"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/currentBest"
+            android:layout_alignParentTop="true"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:text="@string/high_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/highscore"
+            android:layout_alignParentTop="true"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:text="@string/joint_angle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/JointAngleText"
+            android:textSize="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:layout_width="180dp"
+            android:layout_height="174dp"
+            app:cpb_background_progressbar_color="#FFCDD2"
+            app:cpb_background_progressbar_width="5dp"
+            app:cpb_progressbar_color="#F44336"
+            app:cpb_progressbar_width="10dp"
+            android:id="@+id/circularPbar"
+            android:layout_below="@+id/JointAngleText"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:text="@string/sqts_completed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/circularPbar"
+            android:layout_marginTop="20dp"
+            android:textSize="40sp"
+            android:background="@drawable/textviewoutline"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/NumSquats" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/jointAngle"
+            android:textSize="40sp"
+            android:layout_alignBottom="@+id/circularPbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="61dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/currentBest"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/jointAngle"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="40sp"
+            android:id="@+id/currentBestValue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/highscore"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:textSize="40sp"
+            android:id="@+id/highscoreValue" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
